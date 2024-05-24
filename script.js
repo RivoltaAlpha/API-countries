@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const searchInput = document.getElementById("search");
   const filterSelect = document.getElementById("filter");
   const countryDetailsContainer = document.getElementById("country-details");
+  const mainContentContainer = document.getElementById("main-content");
   const darkModeToggle = document.getElementById("dark-mode-toggle");
   const body = document.body;
 
