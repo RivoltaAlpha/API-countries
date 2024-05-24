@@ -1,4 +1,4 @@
-const apiEndpoint = "https://restcountries.com/v2/all";
+const apiEndpoint = "data.json";
 
 document.addEventListener("DOMContentLoaded", () => {
   const countriesContainer = document.getElementById("countries-container");
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .catch((error) => console.error("Error fetching countries:", error));
 
-  // Display countries
+  // Display countriess
   function displayCountries(countries) {
     countriesContainer.innerHTML = countries
       .map(
@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <p><strong>Border Countries:</strong> ${
                   country.borders ? country.borders.join(", ") : "None"
                 }</p>
-                <button onclick="closeDetails()">Close</button>
+                <button id="back-button" onclick="closeDetails()"> Close </button>
             </div>
         `;
     document.body.innerHTML = countryDetails;

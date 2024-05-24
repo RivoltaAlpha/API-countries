@@ -28,7 +28,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  flex-flow: column;
+  /* flex-flow: column; */
   justify-content: space-between;
   align-items: center;
   background-color: var(--header-background);
@@ -56,6 +56,7 @@ header {
 .searching-buttons {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
   flex-flow: column;
   justify-content: space-between;
   justify-items: center;
@@ -85,6 +86,7 @@ main {
   justify-content: center;
   padding: 20px;
   gap: 40px;
+  margin: 0 auto;
 }
 
 .country {
@@ -121,31 +123,30 @@ main {
   display: none;
 }
 
-#country-details {
-  display: none;
+.country-details {
+  display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  width: 80%;
-  max-width: 1000px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: auto;
   background-color: var(--header-background);
-  padding: 20px;
+  padding: 200px;
   border-radius: 8px;
   box-shadow: 0 2px 4px var(--box-shadow);
 }
 
-#country-details img {
-  width: 300px;
-  height: auto;
+.country-details img {
+  width: 30%;
+  height: 200px;
+  object-fit: cover;
   border-radius: 4px;
-  margin-bottom: 20px;
-}
-
-#country-details h2 {
-  margin: 0;
 }
 
 #back-button {
   margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
   padding: 10px;
   cursor: pointer;
   background-color: var(--button-background);
